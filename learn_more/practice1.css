@@ -1,0 +1,62 @@
+td {
+    width: 400px;
+    border: black 1px solid;
+    border-radius: 30px;
+    background-color: white;
+    padding: 30px;
+}
+table {
+    width: 1000px;
+    height: 300px;
+    table-layout: fixed;
+    border-collapse: separate;
+
+}
+.firstblock {
+    display: flex;
+    flex-direction: column;
+}
+.twoblock {
+    background-color: rgb(190, 245, 141);
+}
+.threeblock {
+    background-color: rgb(25, 25, 25);
+}
+
+.green {
+    background-color: rgb(190, 245, 141);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 7px;
+    color: black;
+    font-size: 25px;
+}
+.white {
+    background-color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 7px;
+    color: black;
+    font-size: 25px;
+}
+img {
+    height: 150px;
+    width: 200px;
+    transform: translateX(100%);
+    display: absolute;
+    padding-left: 10px;
+}
+.rotatecircle {
+    rotate: -120deg;
+}
+.displaycenter {
+    display: flex;
+    align-items: center;
+}
+.between { 
+    padding-left: 15px;
+}
+.whitetext {
+    padding-left: 15px;
+    color: white;
+}
