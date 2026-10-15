@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(88, 88, 255);
+}
+.div12 {
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1 {
+    width: 700px;
+    height: 700px;
+    background-image: url("images/bbvv.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.idkblock1 {
+    width: 700px;
+    position: absolute;
+    top: 60%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.textblock1 {
+    width: 100%;
+    height: auto;
+    font-size: 40px;
+    color: white;
+    background-color: rgb(88, 88, 255);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.textblock {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+.block1 {
+    width: 200px;
+    height: 150px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+}
+.image1 {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 208, 0);
+    border-radius: 100%;
+}
+.image12 {
+    width: 50px;
+    height: 50px;
+    background-image: url("images/maths.png");
+    background-size: cover;
+    background-position: center;
+}
+.image13 {
+    width: 50px;
+    height: 50px;
+    background-image: url("images/atom.png");
+    background-size: cover;
+    background-position: center;
+}
+.image14 {
+    width: 50px;
+    height: 50px;
+    background-image: url("images/medicine.png");
+    background-size: cover;
+    background-position: center;
+}
+.image15 {
+    width: 50px;
+    height: 50px;
+    background-image: url("images/english-language.png");
+    background-size: cover;
+    background-position: center;
+}
+.image16 {
+    width: 50px;
+    height: 50px;
+    background-image: url("images/technology.png");
+    background-size: cover;
+    background-position: center;
+}
+.image17 {
+    width: 50px;
+    height: 50px;
+    background-image: url("images/smart-watch.png");
+    background-size: cover;
+    background-position: center;
+}
+.blocktext1 {
+    font-size: 18px;
+    color: rgb(88, 88, 255);
+}
+.block2 {
+    width: auto;
+    height:auto;
+}
+.blocktext2 {
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+.cards {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    padding-top: 40px;
+}
+
+.card {
+    width: 184px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.card img {
+    width: 100%;
+    height: 173px;
+    object-fit: cover;
+    border-radius: 8px;
+}
