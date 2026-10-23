@@ -43,22 +43,6 @@ img {
     display: block;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80px;
-}
-
-.header p {
-    margin: 0;
-}
-
-.logo {
-    font-size: 30px;
-    color: #888888;
-}
-
 .hero {
     background-image: url("images/hero.jpg");
     background-size: cover;
