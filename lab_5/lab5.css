@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -43,19 +39,20 @@ img {
     display: block;
 }
 
-.hero {
+.block1 {
+    height: 700px;
     background-image: url("images/hero.jpg");
     background-size: cover;
     background-position: center;
-    padding: 90px 0 60px;
+    margin-bottom: 70px;
 }
 
-.hero-text {
+.block1text {
     width: 65%;
     margin-left: auto;
 }
 
-.hero h3 {
+.block1 h3 {
     text-transform: uppercase;
     letter-spacing: 8px;
     font-weight: normal;
@@ -71,12 +68,12 @@ h1 {
     margin-bottom: 60px;
 }
 
-.information {
+.info {
     display: flex;
     gap: 30px;
 }
 
-.information > div {
+.info > div {
     width: 33.33%;
 }
 
@@ -86,11 +83,14 @@ h4 {
     margin-bottom: 15px;
 }
 
+.advantages {
+    margin-bottom: 70px;
+}
 .advantages h2, .breads h2, .sweets h2 {
     text-align: center;
 }
 
-.advantages-list {
+.advantageslist {
     display: flex;
     flex-wrap: wrap;
     gap: 40px 30px;
@@ -118,13 +118,13 @@ h4 {
     color: white;
 }
 
-.fresh-content {
+.freshcontent {
     display: flex;
     align-items: center;
     gap: 60px;
 }
 
-.fresh-content > img {
+.freshcontent > img {
     width: 50%;
     height: 600px;
     object-fit: cover;
@@ -213,7 +213,7 @@ h4 {
     gap: 30px;
 }
 
-.menu-card {
+.menucard {
     width: 33.33%;
     background-color: white;
     border-radius: 20px;
@@ -327,81 +327,4 @@ footer p {
 .email {
     color: #f2952d;
     border-bottom: 2px solid #f2952d;
-}
-
-/* Tablets */
-@media (max-width: 1000px) {
-    h1 {
-        font-size: 80px;
-    }
-
-    .hero-text {
-        width: 80%;
-    }
-
-    .advantage, .bread-card {
-        width: calc((100% - 30px) / 2);
-    }
-
-    .bread-list {
-        gap: 30px;
-    }
-
-    .menu-card {
-        padding: 25px;
-    }
-}
-
-/* Phones */
-@media (max-width: 650px) {
-    .section {
-        padding: 45px 0;
-    }
-
-    h1 {
-        font-size: 64px;
-    }
-
-    h2 {
-        font-size: 34px;
-    }
-
-    .hero {
-        background-position: right;
-        padding: 50px 0;
-    }
-
-    .hero-text {
-        width: 100%;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.85);
-    }
-
-    .information, .fresh-content, .quality-photos, .menu-list {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .information > div, .advantage, .bread-card,
-    .fresh-content > img, .fresh-content > div,
-    .quality-photos > div, .quality-photos > img,
-    .quality-text, .menu-card {
-        width: 100%;
-    }
-
-    .fresh-content > img, .quality-photos img {
-        height: 350px;
-    }
-
-    .bread-card img {
-        height: 230px;
-    }
-
-    .breakfast {
-        min-height: 450px;
-    }
-
-    .contact-box {
-        padding: 30px 20px;
-    }
 }
