@@ -1,0 +1,423 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #111111;
+}
+
+.container {
+    width: 1140px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+h1, h2, h3, h4, p {
+    margin-top: 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 45px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.logo {
+    font-size: 30px;
+    color: #888888;
+}
+
+.hero {
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 90px 0 60px;
+}
+
+.hero-text {
+    width: 65%;
+    margin-left: auto;
+}
+
+.hero h3 {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 110px;
+    line-height: 1;
+    margin-bottom: 60px;
+}
+
+.information {
+    display: flex;
+    gap: 30px;
+}
+
+.information > div {
+    width: 33.33%;
+}
+
+h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.advantages h2, .breads h2, .sweets h2 {
+    text-align: center;
+}
+
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+}
+
+.advantage {
+    width: calc((100% - 60px) / 3);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.advantage img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.advantage h3 {
+    font-size: 20px;
+}
+
+.fresh {
+    background-color: #000000;
+    color: white;
+}
+
+.fresh-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.fresh-content > img {
+    width: 50%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.fresh-content > div {
+    width: 50%;
+    padding: 40px 0;
+}
+
+.breads {
+    background-color: #f2f2f2;
+}
+
+.bread-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.bread-card {
+    width: calc((100% - 75px) / 4);
+    padding: 25px 20px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.bread-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.bread-card h3 {
+    text-transform: uppercase;
+    font-size: 21px;
+}
+
+.bread-card p {
+    font-style: italic;
+}
+
+.quality-photos {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.quality-photos > div, .quality-photos > img {
+    width: calc((100% - 50px) / 2);
+}
+
+.quality-photos img {
+    height: 520px;
+    object-fit: cover;
+}
+
+.quality-photos > div img {
+    width: 100%;
+}
+
+.quality-text {
+    width: 75%;
+    margin-top: 45px;
+}
+
+.quality-text h3 {
+    font-size: 32px;
+}
+
+.sweets {
+    background-image: url("images/sweets.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 130px;
+}
+
+.sweets h2 {
+    color: white;
+}
+
+.menu-list {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-card {
+    width: 33.33%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.menu-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.menu-card li {
+    margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.menu-card li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+}
+
+.breakfast {
+    text-align: center;
+    background-image: url("images/breakfast.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.breakfast h2 {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact {
+    background-image: url("images/contact.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-box {
+    width: 560px;
+    max-width: 90%;
+    margin: 0 auto 0 5%;
+    padding: 50px;
+    background-color: #111111;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.contact h2 {
+    color: #f2952d;
+}
+
+footer {
+    padding: 35px;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Decorative buttons */
+.button {
+    display: inline-block;
+    padding: 16px 52px;
+    margin-top: 20px;
+    border: 2px solid #454545;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.button-light {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.more-button {
+    padding: 0 0 4px;
+    border: 0;
+    border-bottom: 1px solid #111111;
+    background-color: transparent;
+    color: #111111;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: default;
+}
+
+.breakfast-image {
+    width: 100%;
+    max-height: 734px;
+    object-fit: contain;
+    margin: 15px auto 0;
+}
+
+.email {
+    color: #f2952d;
+    border-bottom: 2px solid #f2952d;
+}
+
+/* Tablets */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    .hero-text {
+        width: 80%;
+    }
+
+    .advantage, .bread-card {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .bread-list {
+        gap: 30px;
+    }
+
+    .menu-card {
+        padding: 25px;
+    }
+}
+
+/* Phones */
+@media (max-width: 650px) {
+    .section {
+        padding: 45px 0;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .hero {
+        background-position: right;
+        padding: 50px 0;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    .information, .fresh-content, .quality-photos, .menu-list {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .information > div, .advantage, .bread-card,
+    .fresh-content > img, .fresh-content > div,
+    .quality-photos > div, .quality-photos > img,
+    .quality-text, .menu-card {
+        width: 100%;
+    }
+
+    .fresh-content > img, .quality-photos img {
+        height: 350px;
+    }
+
+    .bread-card img {
+        height: 230px;
+    }
+
+    .breakfast {
+        min-height: 450px;
+    }
+
+    .contact-box {
+        padding: 30px 20px;
+    }
+}
