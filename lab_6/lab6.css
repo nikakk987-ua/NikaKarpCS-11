@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+                url("images/FFTablet_1100x.progressive.webp");
+    background-size: cover;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 32px 4%;
+    position: relative;
+    overflow: hidden;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.work {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    font: bold 15px Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.work .logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.hireus {
+    display: none;
+    font: bold 15px Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.morebutton {
+    width: 214px;
+    height: 56px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font: bold 13px Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.morebutton:hover {
+    background: white;
+    color: black;
+}
+
+.gianttext {
+    margin-top: 42px;
+    text-align: center;
+    font-size: 150px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.work1 {
+    margin-top: 28px;
+    text-align: center;
+    font-size: clamp(11px, 1.3vw, 17px);
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+.star {
+    padding: 0 8px;
+}
+
+.downthing {
+    position: absolute;
+    bottom: 65px;
+    left: 6.2%;
+    right: 6.2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.description {
+    width: 340px;
+    max-width: 38%;
+    font-size: clamp(16px, 2.1vw, 27px);
+    line-height: 1.35;
+}
+
+.downthing img {
+    width: 210px;
+    max-width: 30%;
+    height: auto;
+}
+
+.scroll-circle {
+    position: absolute;
+    bottom: 105px;
+    left: 50%;
+    width: 125px;
+    height: 125px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-circle span {
+    position: absolute;
+    width: 125px;
+    text-align: center;
+    font: 11px Arial, sans-serif;
+    letter-spacing: 4px;
+    transform: rotate(-65deg);
+}
+
+.arrow {
+    position: absolute;
+    bottom: 12px;
+    font: 42px Arial, sans-serif;
+}
+
+@media (max-width: 1200px) {
+
+    .space {
+        justify-content: flex-end;
+        button {
+            display: none;
+        }
+    }
+    .hireus {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        font: bold 13px Arial, sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .work {
+        font-size: 13px;
+        img {
+            display: none;
+        }
+    }
+
+    .gianttext {
+        display: none;
+    }
+
+    .work1 {
+        margin-top: 50px;
+    }
+
+    .downthing {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 150px;
+    }
+
+    .description {
+        width: 600px;
+        max-width: 100%;
+        text-align: center;
+}
+
+    .scroll-circle {
+        display: none;
+    }
+
+    .downthing img {
+        width: 150px;
+        max-width: 100%;
+    }
+}
