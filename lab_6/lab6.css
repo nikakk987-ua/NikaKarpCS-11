@@ -113,30 +113,37 @@ body {
 }
 
 .scroll-circle {
-    position: absolute;
-    bottom: 105px;
-    left: 50%;
-    width: 125px;
-    height: 125px;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
 }
 
-.scroll-circle span {
-    position: absolute;
-    width: 125px;
-    text-align: center;
-    font: 11px Arial, sans-serif;
-    letter-spacing: 4px;
-    transform: rotate(-65deg);
+.circle-text {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.circle-text svg {
+    width: 100px;
+    height: 100px;
+    overflow: visible;
+}
+
+.circle-text text {
+    fill: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .arrow {
     position: absolute;
-    bottom: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font: 42px Arial, sans-serif;
+    line-height: 1;
 }
 
 @media (max-width: 1200px) {

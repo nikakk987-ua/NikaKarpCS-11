@@ -1,0 +1,100 @@
+<head>
+<link href="lab7.css" rel="stylesheet">
+</head>
+<body>
+<main>
+  <h1>Завдання 1</h1>
+  <h2>Площа трикутника за трьома сторонами</h2>
+  <p class="lead">Введи довжини трьох сторін — калькулятор порахує площу й покроково покаже, звідки взялась відповідь.
+    <br><span class="formula">S = √( p · (p − a) · (p − b) · (p − c) ), де p = (a + b + c) / 2</span></p>
+
+  <section id="task1">
+    <form>
+      <h2>Сторони трикутника</h2>
+      <label for="a">Сторона a
+        <span>число більше нуля, можна з комою</span>
+        <input type="text" id="a" inputmode="decimal" autocomplete="off" placeholder="наприклад, 3">
+      </label>
+      <label for="b">Сторона b
+        <input type="text" id="b" inputmode="decimal" autocomplete="off" placeholder="наприклад, 4">
+      </label>
+      <label for="c">Сторона c
+        <input type="text" id="c" inputmode="decimal" autocomplete="off" placeholder="наприклад, 5">
+      </label>
+      <div class="buttons">
+        <button class="primary" type="submit">Порахувати площу</button>
+      </div>
+      <div id="error" role="alert" hidden></div>
+    </form>
+
+    <div id="result" hidden>
+      <div class="answer" id="answer"></div>
+      <ol class="steps" id="steps"></ol>
+    </div>
+  </section>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+// Текст у число (кома теж підходить як роздільник)
+function parseSide(text) {
+  const t = text.trim().replace(',', '.');
+  return /^\d*\.?\d+$/.test(t) ? Number(t) : NaN;
+}
+
+// Число до 4 знаків після коми, без зайвих нулів
+function fmt(x) {
+  return x.toLocaleString('uk-UA', { maximumFractionDigits: 4, useGrouping: false });
+}
+
+function showError(msg) {
+  $('error').textContent = msg;
+  $('error').hidden = false;
+  $('result').hidden = true;
+}
+
+function render(a, b, c) {
+  const p = (a + b + c) / 2;
+  const pa = p - a, pb = p - b, pc = p - c;
+  const product = p * pa * pb * pc;
+  const area = Math.sqrt(product);
+
+  const check = (x, y, z, n1, n2, n3) =>
+    `<div class="calc ok">${n1} + ${n2} > ${n3} → ${fmt(x)} + ${fmt(y)} = ${fmt(x + y)} > ${fmt(z)} ✓</div>`;
+
+  $('answer').textContent = `Відповідь: S = ${fmt(area)} (квадратних одиниць)`;
+
+  $('result').hidden = false;
+}
+
+$('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  $('error').hidden = true;
+
+  const a = parseSide($('a').value);
+  const b = parseSide($('b').value);
+  const c = parseSide($('c').value);
+
+  // 1) Чи введено коректні числа?
+  const wrong = [['a', a], ['b', b], ['c', c]].filter(([, v]) => !(v > 0)).map(([n]) => n);
+  if (wrong.length) {
+    return showError(`Перевір сторону ${wrong.join(', ')}: потрібне число більше нуля, наприклад 5 або 3,5.`);
+  }
+
+  // 2) Чи існує такий трикутник?
+  if (a + b <= c || a + c <= b || b + c <= a) {
+    const longest = Math.max(a, b, c);
+    const others = a + b + c - longest;
+    return showError(
+      `Такого трикутника не існує: найдовша сторона ${fmt(longest)} не менша за суму двох інших (${fmt(others)}). ` +
+      `Зроби найдовшу сторону коротшою або збільш інші.`
+    );
+  }
+
+  render(a, b, c);
+  $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+</body>
+</html>
